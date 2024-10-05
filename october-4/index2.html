@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Boxes</title>
+  <style>
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    
+    .box {
+      width: 200px;
+      height: 50px;
+      background-color: lightblue;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      cursor: pointer;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+  <div class="box">Box 4</div>
+  <div class="box">Box 5</div>
+  <div class="box">Box 6</div>
+</div>
+
+<script>
+
+// * 3. What is event delegation, and why is it useful?
+
+// document.querySelectorAll('.box').forEach(el =>{
+
+//   el.addEventListener('click', (e)=>{
+// alert(e.target.textContent)
+//   })
+// })
+
+
+document.querySelector("#container").addEventListener("click",(e)=>{
+if(e.target.classList.contains("box")){
+  alert(e.target.textContent)
+}
+
+
+})
+
+</script>
+
+</body>
+</html>
