@@ -1,16 +1,10 @@
-
-
 //  what is application of closures 
-
 
 // * Explain event bubbling or event propagation in JavaScript.
 
 // !  to stop this   -->  e.stopPropagation();
 
-
-
 //!   What is event capturing or  trickling in JavaScript?
-
 document.getElementById('parent').addEventListener('click', () => {
   console.log("Parent clicked");
 },true);
